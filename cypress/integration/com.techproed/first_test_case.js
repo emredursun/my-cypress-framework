@@ -9,8 +9,8 @@ describe('My First Test', () => {
     })
 
     it('TITLE Test', () => {
-        // And Verify the url contains google
+        // And Verify the title equals Google
         cy.visit('https://www.google.com/')
-        cy.url().should('include','google')
+        cy.title().should('eq','Google')
     })
   })
