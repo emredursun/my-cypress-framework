@@ -1,11 +1,12 @@
 describe('suggested elements',()=>{
     it('suggested elements',()=>{
         cy.visit("https://www.google.com/")
+        cy.get('#L2AGLb > .QS5gu').click()
         cy.get("input[name='q']").type('usa')
         cy.wait(3000)
         cy
         .get('li span b')//getting the list of bold items
-        .contains('map')//choosing the one that contains map
+        .contains('today')//choosing the one that contains map
         .click()//then clicking on it
 
         /*li span b :
@@ -21,7 +22,7 @@ describe('suggested elements',()=>{
     
   
     it('automation practice . com ',()=>{
-        cy.visit("http://automationpractice.com/index.php")
+        cy.visit("http://automationpractice.pl/index.php")
         cy.get("input[id='search_query_top']").type('dress')
         cy.wait(5000)
         // METHOD 1 is locate the one of the suggested option

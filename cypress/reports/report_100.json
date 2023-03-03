@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-03-03T11:14:04.572Z",
+    "end": "2023-03-03T11:14:27.509Z",
+    "duration": 22937,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7fde0361-9ba2-4b25-91d4-a8df2a6f489e",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_suggested_elements.js",
+      "file": "cypress/integration/com.techproed/day02_suggested_elements.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ad0b49f-e52a-4853-b539-095f7410aedf",
+          "title": "suggested elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "suggested elements",
+              "fullTitle": "suggested elements suggested elements",
+              "timedOut": null,
+              "duration": 7151,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.google.com/\");\ncy.get('#L2AGLb > .QS5gu').click();\ncy.get(\"input[name='q']\").type('usa');\ncy.wait(3000);\ncy.get('li span b') //getting the list of bold items\n.contains('today') //choosing the one that contains map\n.click(); //then clicking on it\n/*li span b :\nmap\na login\njobs\ntoday\na customer service\n  */",
+              "err": {},
+              "uuid": "259752ab-17d3-4ae4-abf9-d77ee369e321",
+              "parentUUID": "4ad0b49f-e52a-4853-b539-095f7410aedf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "automation practice . com ",
+              "fullTitle": "suggested elements automation practice . com ",
+              "timedOut": null,
+              "duration": 12785,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://automationpractice.pl/index.php\");\ncy.get(\"input[id='search_query_top']\").type('dress');\ncy.wait(5000); // METHOD 1 is locate the one of the suggested option\n//Then click on it\n// cy\n// .get('.ac_results > ul > :nth-child(2)')\n// .click()\n//METHOD 2 is to use contains\n//and click on it\ncy.get('.ac_results') //Summer Dresses > Printed Summer,Evening Dresses > Printed ,Summer Dresses > Printed Summer ,..\n.contains('Blouse') //Click on the 1st element if there are multiple match\n.click();\ncy.wait(5000); //Assertion\ncy.get(\"h1[itemprop='name']\").should('be.visible');",
+              "err": {},
+              "uuid": "65e36fd1-36b4-4212-8929-579dcef39ef7",
+              "parentUUID": "4ad0b49f-e52a-4853-b539-095f7410aedf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "259752ab-17d3-4ae4-abf9-d77ee369e321",
+            "65e36fd1-36b4-4212-8929-579dcef39ef7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19936,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

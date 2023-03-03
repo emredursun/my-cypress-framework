@@ -30,7 +30,7 @@ import 'cypress-file-upload';
 	-click on the sign in button
 */
 Cypress.Commands.add('login',(email,password) => {
-    cy.visit("http://automationpractice.com/index.php")
+    cy.visit("http://automationpractice.pl/index.php")
     cy.get('.login').click()
     cy.get('#email').type(email)
     cy.get('#passwd').type(password)

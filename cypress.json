@@ -1,6 +1,6 @@
 {
   "chromeWebSecurity": false,
-  "projectId": "tpdgta",
+  "projectId": "a1nk1n",
   "reporter": "mochawesome",
   "reporterOptions": {
       "reportDir": "cypress/reports",

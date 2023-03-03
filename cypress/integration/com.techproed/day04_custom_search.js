@@ -4,9 +4,9 @@ describe('Search',()=>{
      cy.amazonSearch('teapot')  
 
     
-     cy.get('.a-color-state').should('have.text','"teapot"')
+     cy.get('.a-section > .a-color-state').should('have.text','"teapot"')
      
      cy.title().should('include','teapot')
-
+     //cy.screenshot()
     })
 })

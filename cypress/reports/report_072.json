@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-03-02T22:24:43.368Z",
+    "end": "2023-03-02T22:24:55.071Z",
+    "duration": 11703,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53bf5c10-121f-4453-ae27-b5ba3f229510",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_checkbox.js",
+      "file": "cypress/integration/com.techproed/day02_checkbox.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fe1b264c-d783-4ee1-a871-01626e6b9691",
+          "title": "checkboxes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check all checkboxes",
+              "fullTitle": "checkboxes check all checkboxes",
+              "timedOut": null,
+              "duration": 9685,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//go to http://automationpractice.com/index.php\n//click on WOMEN\n//check the first checkbox\ncy.visit('http://automationpractice.pl/index.php');\ncy.get('.sf-with-ul') //returning 4 elements\n.first() //selecting on the first element\n.click(); //clicking on the first one\n// input[type='checkbox'] returns all of the checkbox on the page\ncy.get(\"input[type='checkbox']\").check();\ncy.wait(3000);\ncy.get(\"input[type='checkbox']\").uncheck();",
+              "err": {},
+              "uuid": "ccd3ed8e-acdc-4ce5-85ee-3309dc33e5f2",
+              "parentUUID": "fe1b264c-d783-4ee1-a871-01626e6b9691",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ccd3ed8e-acdc-4ce5-85ee-3309dc33e5f2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9685,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

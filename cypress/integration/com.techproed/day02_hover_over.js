@@ -1,5 +1,5 @@
 describe('move over',()=>{
-    it('move over',()=>{
+    it('amazon hover over',()=>{
         cy.visit('https://www.amazon.com/')
 
         cy
@@ -19,7 +19,7 @@ describe('move over',()=>{
 
        //select Canada from the dropdown
        cy
-       .get('#icp-selected-country')
+       .get("#icp-dropdown")
        .select('Canada',{ force: true })
     })
 })
