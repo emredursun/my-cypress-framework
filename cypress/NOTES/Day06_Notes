@@ -46,12 +46,12 @@ npm run test-chrome
 
 4. running codes on the dashboard 
 USER YOUR OWN PROJECT NUMBER
-./node_modules/.bin/cypress run --record --key 992f69ba-ef7c-407b-a762-143ab7d21401
+./node_modules/.bin/cypress run --record --key 18c458ed-bbba-4318-a308-1eb4cf4b7661
 
 Add script:
-"test-dashboard":"./node_modules/.bin/cypress run --record --key 992f69ba-ef7c-407b-a762-143ab7d21401"
+"test-dashboard":"./node_modules/.bin/cypress run --record --key 18c458ed-bbba-4318-a308-1eb4cf4b7661"
 OR
-"test-dashboard":"npm run test -- --record --key 992f69ba-ef7c-407b-a762-143ab7d21401"
+"test-dashboard":"npm run test -- --record --key 18c458ed-bbba-4318-a308-1eb4cf4b7661"
 Then Run:
 npm run test-dashboard
 ============

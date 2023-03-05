@@ -8,7 +8,7 @@
     "generate_mochawesome_report": "marge cypress/reports/output.json --reportDir ./ --inline",
     "test-headed": "npm run test -- --headed",
     "test-chrome": "cypress run --headed --browser=chrome",
-    "test-script": "cypress run --record --key 992f69ba-ef7c-407b-a762-143ab7d21401"
+    "test-script": "cypress run --record --key 18c458ed-bbba-4318-a308-1eb4cf4b7661"
   },
   "keywords": [],
   "author": "",

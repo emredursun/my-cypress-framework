@@ -74,13 +74,13 @@ npm install cypress --save-dev
 ./node_modules/.bin/cypress run --spec PATH OF THE SPEC FILE
 
 Below command runs day01_login_test.js only on the headless on electron
-./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/day01_login_test.js
+./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/day01_finding_elements.js
 
 Below command runs day01_login_test.js only on the browser 
 -ADD --headed 
 -Runs on electron headed
 -Closes the broser automatically when the test case is complete
-./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/day01_login_test.js --headed
+./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/day01_finding_elements.js --headed
 
 ***run all test in certain package:
 package: com.techproed
@@ -89,8 +89,8 @@ tests  : all of the tests
 ./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/*.js
 
 ***run on chrome from TERMINAL
-./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/day01_login_test.js --browser chrome
-./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/day01_login_test.js --browser firefox
+./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/day01_finding_elements.js --browser chrome
+./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/day01_finding_elements.js --browser firefox
 
 
 *****MOCHA FRAMEWORK***
@@ -131,7 +131,7 @@ When you create a project cypres dashboard give two id:
 ./node_modules/.bin/cypress run --record --key 18c458ed-bbba-4318-a308-1eb4cf4b7661
 
 **Running specific test case and saving the rpeorts on the dashboard
-./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/day01_login_test.js --record --key 18c458ed-bbba-4318-a308-1eb4cf4b7661
+./node_modules/.bin/cypress run --spec cypress/integration/com.techproed/day01_finding_elements.js --record --key 18c458ed-bbba-4318-a308-1eb4cf4b7661
 
 -Then you should see all of the reports onyour cypress dashboard
 ================================
@@ -159,8 +159,9 @@ sudo chown -R $USER /usr/local/lib/node_modules
 4. Add mochawesome report configurations inside CYPRESS.JSON FILE
 {
   "chromeWebSecurity": false,
+  "projectId": "a1nk1n",
   "reporter": "mochawesome",
-    "reporterOptions": {
+  "reporterOptions": {
       "reportDir": "cypress/reports",
       "reportFilename": "report",
       "overwrite": false,
@@ -168,7 +169,12 @@ sudo chown -R $USER /usr/local/lib/node_modules
       "json": true,
       "charts": true
     },
-    "video": false
+  
+    "video": false,
+    "retries": {
+      "runMode": 1,
+      "openMode": 0
+    }
 }
 
 
