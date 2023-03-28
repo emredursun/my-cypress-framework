@@ -1,5 +1,5 @@
-describe('navigations',()=>{
-    it.skip('back, forward, refresh',()=>{
+describe('navigations', () => {
+    it.skip('back, forward, refresh', () => {
         cy.visit('https://qa-environment.crystalkeyhotels.com/');
         // hard wait of cypress
         cy.wait(3000)
@@ -20,29 +20,29 @@ describe('navigations',()=>{
         cy.wait(3000)
 
         //Refresh the page using reload
-        cy.reload() 
-        
+        cy.reload()
+
     })
 
-    it('chaining the navigations',()=>{
-         //WE CAN CHAIN THE FUNCTION
-         cy.visit('https://qa-environment.crystalkeyhotels.com/');
+    it('chaining the navigations', () => {
+        //WE CAN CHAIN THE FUNCTION
+        cy.visit('https://qa-environment.crystalkeyhotels.com/');
 
-         //chaining the methods
-         cy
-         .contains('Log in')
-         .click()
-         .go('back')
-         .go('forward')
-         .go('back');
+        //chaining the methods
+        cy
+            .contains('Log in')
+            .click()
+            .go('back')
+            .go('forward')
+            .go('back');
 
 
-         //forcing to reload. Note that we do not need to force here
-         //And verify the Log in link is visible
-         cy
-         .reload(true)//true means force
-         .contains('Log in')//getting the Log in element
-         .should('be.visible')//asserting if the element is visible 
+        //forcing to reload. Note that we do not need to force here
+        //And verify the Log in link is visible
+        cy
+            .reload(true) //true means force
+            .contains('Log in') //getting the Log in element
+            .should('be.visible') //asserting if the element is visible 
 
     })
 })

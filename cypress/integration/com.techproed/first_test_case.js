@@ -15,4 +15,4 @@ describe('My First Test', () => {
         cy.get('#L2AGLb > .QS5gu').click()
         cy.title().should('eq','Google')
     })
-  })
+})

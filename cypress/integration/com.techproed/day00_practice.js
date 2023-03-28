@@ -1,24 +1,48 @@
-describe('Finding Elements', () => {
-    it('get method', () => {
-        cy.visit('https://qa-environment.crystalkeyhotels.com/');
-        cy.contains('Log in').click()
+describe("Go to the application", () => {
+    beforeEach(() => {
+        cy.visit("https://qa-environment.crystalkeyhotels.com/");
+    });
 
-        //ASSERTINS:
-        //1. Asserting if url includes Logon
-        cy.url().should('include', 'Logon')
+    it("Cypress Basics Functionalities", () => {
+        // Clicking on the 'Log in' link
+        cy.contains('Log in').click();
 
-        //2. Assert if Log in is visible
+        // Verifying if the user is on the 'Log in' page
+        cy.url().should('include', 'Account/Logon');
+        cy.title().should('include', 'Log in');
+    });
+
+    it("Login Functionality", () => {
+        // Go to 'Log in' page
+        cy.contains('Log in').click();
+
+        // Find username and type 'manager'
+        cy.get('#UserName').type('manager');
+
+        // Find password and type 'Manager2!' 
+        cy.get('#Password').type('Manager2!');
+
+        // Clicking on the 'Log in' button
+        cy.get('#btnSubmit').click();
+    });
+
+    it.only("Finding Elements", () => {
+        // Go to 'Log in' page
+        cy.contains('Log in').click();
+
+        // ASSERTIONS:
+        // 1. Asserting if url includes 'Logon' or if title includes 'Login in'
+        cy.url().should('include', 'Account/Logon');
+        cy.title().should('include', 'Log in');
 
         //CSS LOCATORS FOR LOG IN
-
         //.row > .mb-4
         //h2.mb-4
         //h2[class='mb-4']
 
-        //1. get () is used to locate the elements
+        // 2. Asserting if Log in is visible
         //should('be.visible') : checking if the element is visible 
-        cy.get('.row > .mb-4').should('be.visible')
-
+        cy.get("h2[class='mb-4']").should('be.visible');
 
         //Finding total number of links that is child of li
         //Assert the total is 29
@@ -47,13 +71,5 @@ describe('Finding Elements', () => {
             cy.get("a[href='/Rooms/318']").should('have.length', 1)
             cy.get("a[href='/Rooms/318']").click()
         })
-
-        /*
-        NOTES: -We should always try get() to find the elements first
-        -If this fails to locate the element(not visible, not unique ,...)
-        Then try find
-        -If that also doesn't locate the element
-        Then use within
-         */
-    })
-})
+    });
+});
